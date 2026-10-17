@@ -25,3 +25,10 @@ htmlcov/
 .vscode/
 .idea/
 .DS_Store
+
+# GeoLite2 database (licensed, download separately — see README)
+data/*.mmdb
+
+# Generated reports
+report.md
+report.json

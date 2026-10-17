@@ -1,0 +1,39 @@
+# soc-log-triage configuration. Every number here is a deliberate design
+# decision (see README "Scoring" and "Correlation").
+
+[scoring]
+login_success = 5
+login_failed  = 10
+port_scan     = 40
+brute_force   = 70
+sudo_root     = 30
+arp_spoof     = 60
+
+[scoring.bonus]
+in_blocklist           = 20
+external_ip            = 10
+success_after_failures = 25
+
+[thresholds]
+low_max    = 29
+medium_max = 69
+
+[correlation]
+window_seconds        = 3600
+brute_force_threshold = 5
+
+[incident_score]
+breach = 90
+attack = 65
+recon  = 35
+
+[enrichment]
+internal_prefix = "10.10.10."
+blocklist_path  = "data/blocklist.txt"
+geoip_path      = "data/GeoLite2-City.mmdb"
+# AbuseIPDB key read from env var ABUSEIPDB_KEY if present
+
+[parsers]
+# Suricata signature IDs that mean "port scan".
+# 86601 = spec default; 1000001 = the lab's local rule "LOCAL Nmap TCP scan detected".
+port_scan_sids = [86601, 1000001]
