@@ -1,1 +1,1 @@
-"""Parsers that read raw log files into one common event format."""
+"""Parsers: one module per log format, each turning a file into a list of Event."""

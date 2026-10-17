@@ -1,1 +1,4 @@
-requests
+geoip2>=4.8
+requests>=2.31
+rich>=13.0
+pytest>=8.0

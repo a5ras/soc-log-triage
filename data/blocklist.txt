@@ -1,0 +1,5 @@
+# soc-log-triage blocklist — one malicious IP per line, '#' starts a comment.
+# Demo entries: IPs from the documentation ranges (RFC 5737), used by
+# samples/public_sample.json. Replace with your own threat-intel feed.
+203.0.113.66
+198.51.100.23

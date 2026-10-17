@@ -1,1 +1,1 @@
-"""Unit tests for parsers and detections, run against the sample logs."""
+"""Unit tests for parsers, scoring and correlation, run against the real lab samples."""

@@ -1,1 +1,1 @@
-"""Reads Suricata eve.json (JSON lines) and converts each record into the common event format."""
+"""Parses Suricata eve.json (one JSON object per line) into Event objects."""

@@ -1,1 +1,1 @@
-"""Groups events and findings by source IP into per-attacker timelines."""
+"""Groups events by source IP into incidents, classifies them and flags slow attacks."""
