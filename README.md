@@ -208,9 +208,48 @@ python main.py --input samples/ --format markdown --output report.md --min-sever
 
 Running `python main.py --input samples/` on the real lab logs:
 
+![Terminal output of python main.py --input samples/](docs/terminal.svg)
+
+The same run as text (overview plus the top incident; the remaining three incident timelines are left out):
+
 ```
-TERMINAL_OUTPUT_PLACEHOLDER
+SOC Log Triage — 661 events from 3 file(s) → 4 incidents
+
+Incidents (highest score first)
+┏━━━┳━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ # ┃ Type     ┃ Score ┃ Source IP   ┃ Slow ┃ MITRE               ┃ First seen          ┃ Last seen           ┃ Events ┃
+┡━━━╇━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ 1 │ BREACH   │ 90    │ 10.10.10.40 │ YES  │ T1046, T1078, T1110 │ 2026-10-12 22:08:04 │ 2026-10-13 20:52:44 │ 180    │
+│ 2 │ isolated │ 30    │ local       │ -    │ T1548               │ 2026-10-07 03:17:01 │ 2026-10-17 16:13:39 │ 468    │
+│ 3 │ isolated │ 5     │ 10.0.2.2    │ -    │ -                   │ 2026-10-07 08:36:44 │ 2026-10-17 16:07:26 │ 12     │
+│ 4 │ isolated │ 0     │ 10.10.10.20 │ -    │ -                   │ 2026-10-12 22:05:02 │ 2026-10-12 22:05:02 │ 1      │
+└───┴──────────┴───────┴─────────────┴──────┴─────────────────────┴─────────────────────┴─────────────────────┴────────┘
+
+#1 BREACH 90  10.10.10.40  (internal)  slow attack suspected
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━┳━━━━━━━┓
+┃ When (UTC)                                ┃ Event                           ┃ Source   ┃ Sev ┃ MITRE ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━╇━━━━━━━┩
+│ 2026-10-12 22:08:04 → 2026-10-13 18:27:01 │ port_scan ×4                    │ suricata │ 40  │ T1046 │
+│ 2026-10-13 19:10:12                       │ login_success (user a5rasx)     │ authlog  │ 5   │ T1078 │
+│ 2026-10-13 20:27:19 → 20:27:24            │ login_failed ×8 (user admin)    │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:27:24 → 20:27:29            │ login_failed ×7 (user root)     │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:31:49 → 20:33:07            │ login_failed ×7 (user admin)    │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:33:09 → 20:33:31            │ login_failed ×9 (user root)     │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:33:34 → 20:33:57            │ login_failed ×9 (user test)     │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:34:00 → 20:34:23            │ login_failed ×9 (user fakeuser) │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:34:26 → 20:34:41            │ login_failed ×7 (user guest)    │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:34:56 → 20:37:57            │ login_failed ×9 (user admin)    │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:44:43 → 20:52:26            │ login_failed ×7 (user a5rasx)   │ authlog  │ 10  │ T1110 │
+│ 2026-10-13 20:52:38                       │ login_success (user a5rasx)     │ authlog  │ 30  │ T1078 │
+│                                           │ + 102 other events              │          │     │       │
+└───────────────────────────────────────────┴─────────────────────────────────┴──────────┴─────┴───────┘
 ```
+
+How to read it:
+- **#1 `10.10.10.40` is a BREACH (90, Critical).** The Kali attacker scanned the defender (T1046), brute-forced SSH with Hydra (72 failures, T1110), and then logged in as `a5rasx` (T1078). That last login scores 5 + 25 because it followed at least 5 failures. The scan on Oct 12 and the login on Oct 13 are about 22 hours apart, so **slow attack suspected** is set: a slow breach is flagged, not scored lower.
+- **`local`** holds events without a source IP: sudo use by the lab admin (T1548, 30) and the Wazuh manager's rootcheck alerts.
+- **`10.0.2.2`** is the VirtualBox NAT gateway, used for the admin's own SSH sessions. These are logins only, with no failures or scans, so the incident is `isolated` (5).
+- Lines that carry no security meaning on their own (session open/close, PAM noise) are counted as `other`. They stay in the JSON output but are folded into "+ N other events" on screen.
 
 ## Tests
 
@@ -242,6 +281,7 @@ soc-log-triage/
 │   ├── correlate.py        # incidents, classification, slow-attack flag
 │   └── report.py           # terminal / JSON / Markdown
 ├── tests/
+├── docs/terminal.svg       # README screenshot
 ├── samples/                # real lab logs + public demo sample
 └── data/
     ├── blocklist.txt
