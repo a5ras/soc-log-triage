@@ -1,0 +1,652 @@
+2026-10-07T03:17:01.529764+00:00 soc-defender CRON[2718]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-07T03:17:01.560083+00:00 soc-defender CRON[2718]: pam_unix(cron:session): session closed for user root
+2026-10-07T04:17:01.784643+00:00 soc-defender CRON[2785]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-07T04:17:01.821616+00:00 soc-defender CRON[2785]: pam_unix(cron:session): session closed for user root
+2026-10-07T08:36:44.979918+00:00 soc-defender sshd-session[2824]: Accepted password for a5rasx from 10.0.2.2 port 64628 ssh2
+2026-10-07T08:36:45.003791+00:00 soc-defender sshd-session[2824]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-07T08:36:45.058608+00:00 soc-defender systemd-logind[1030]: New session '9' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-07T16:31:18.245291+00:00 soc-defender sshd[1100]: Server listening on 0.0.0.0 port 22.
+2026-10-07T16:31:18.300188+00:00 soc-defender sshd[1100]: Server listening on :: port 22.
+2026-10-07T16:31:18.324724+00:00 soc-defender systemd-logind[1039]: New seat seat0.
+2026-10-07T16:31:18.338568+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-07T16:31:18.338759+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-07T16:31:18.338880+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-07T16:31:27.619204+00:00 soc-defender sshd-session[1114]: Accepted password for a5rasx from 10.0.2.2 port 62910 ssh2
+2026-10-07T16:31:27.641291+00:00 soc-defender sshd-session[1114]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-07T16:31:28.051082+00:00 soc-defender systemd-logind[1039]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-07T16:31:28.795137+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-07T16:31:28.847061+00:00 soc-defender systemd-logind[1039]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-07T16:40:36.046562+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:40:36.049534+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/nft list ruleset
+2026-10-07T16:40:36.410852+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:45:22.153886+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:45:22.187284+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/nft add table inet suricata_ips
+2026-10-07T16:45:22.206613+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:45:36.933634+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:45:36.942516+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/nft add chain inet suricata_ips input { type filter hook input priority 0; }
+2026-10-07T16:45:36.984161+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:46:48.467329+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:46:48.478832+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/nft add rule inet suricata_ips input iifname enp0s8 queue num 0
+2026-10-07T16:46:48.660832+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:47:02.711246+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:47:02.747727+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/nft list ruleset
+2026-10-07T16:47:02.763426+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:48:31.548341+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:48:31.555558+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl stop suricata
+2026-10-07T16:50:01.806931+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:51:37.354657+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:51:37.364867+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/suricata -c /etc/suricata/suricata.yaml -q 0
+2026-10-07T16:55:10.635057+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:55:10.674418+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/nano /var/lib/suricata/rules/local.rules
+2026-10-07T16:55:29.539698+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:55:41.177044+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:55:41.181129+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/pkill suricata
+2026-10-07T16:55:41.553905+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:55:44.900919+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:55:44.906836+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/suricata -c /etc/suricata/suricata.yaml -q 0
+2026-10-07T16:56:44.770987+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:56:44.778588+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/suricata -c /etc/suricata/suricata.yaml -q 0
+2026-10-07T16:57:47.214698+00:00 soc-defender sshd-session[1742]: Accepted password for a5rasx from 10.0.2.2 port 63943 ssh2
+2026-10-07T16:57:47.259476+00:00 soc-defender sshd-session[1742]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-07T16:57:47.600810+00:00 soc-defender systemd-logind[1039]: New session '3' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-07T16:59:24.965780+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:59:25.585808+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/pkill suricata
+2026-10-07T16:59:25.587099+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T16:59:49.640268+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T16:59:49.659409+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/suricata -c /etc/suricata/suricata.yaml -q 0
+2026-10-07T17:03:32.569709+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:03:53.919838+00:00 soc-defender sudo: message repeated 2 times: [ pam_unix(sudo:session): session closed for user root]
+2026-10-07T17:04:32.543397+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:04:32.545637+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/pkill -9 suricata
+2026-10-07T17:04:32.821609+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:04:44.643541+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:04:44.649292+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/suricata -c /etc/suricata/suricata.yaml -q 0
+2026-10-07T17:07:28.937053+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:08:52.837868+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:08:52.866666+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/4 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/kill -9 1644
+2026-10-07T17:08:52.909425+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:08:53.040912+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:08:53.043132+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/4 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/kill -9 1637
+2026-10-07T17:08:53.065692+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:08:53.189847+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:08:53.191327+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/4 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/kill -9 1643
+2026-10-07T17:08:53.220418+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:09:38.682526+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:09:38.684998+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/modprobe nfnetlink_queue
+2026-10-07T17:09:38.883537+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:09:38.999086+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:09:39.004910+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/suricata -c /etc/suricata/suricata.yaml -q 0
+2026-10-07T17:13:18.651991+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:13:18.685078+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/4 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/grep LOCAL Nmap /var/lib/suricata/rules/local.rules
+2026-10-07T17:13:18.731706+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:14:28.596927+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-07T17:14:28.605538+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/4 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/suricata/fast.log
+2026-10-07T17:17:01.930641+00:00 soc-defender CRON[2181]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-07T17:17:01.970987+00:00 soc-defender CRON[2181]: pam_unix(cron:session): session closed for user root
+2026-10-07T17:20:14.282334+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-07T17:29:35.707562+00:00 soc-defender systemd-logind[2289]: New seat seat0.
+2026-10-07T17:29:35.732663+00:00 soc-defender systemd-logind[2289]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-07T17:29:35.733077+00:00 soc-defender systemd-logind[2289]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-07T17:29:35.737529+00:00 soc-defender systemd-logind[2289]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-07T17:29:35.781247+00:00 soc-defender systemd-logind[2289]: New session '3' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-07T17:29:35.781384+00:00 soc-defender systemd-logind[2289]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-07T17:29:35.781435+00:00 soc-defender systemd-logind[2289]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-07T18:55:41.438020+00:00 soc-defender sshd-session[1372]: Received disconnect from 10.0.2.2 port 62910:11: disconnected by user
+2026-10-07T18:55:42.242466+00:00 soc-defender systemd-logind[2289]: Session 3 logged out. Waiting for processes to exit.
+2026-10-07T18:55:42.244425+00:00 soc-defender sshd-session[1799]: Received disconnect from 10.0.2.2 port 63943:11: disconnected by user
+2026-10-07T18:55:42.246385+00:00 soc-defender sshd-session[1799]: Disconnected from user a5rasx 10.0.2.2 port 63943
+2026-10-07T18:55:42.247786+00:00 soc-defender sshd-session[1372]: Disconnected from user a5rasx 10.0.2.2 port 62910
+2026-10-07T18:55:42.247891+00:00 soc-defender systemd-logind[2289]: Removed session 3.
+2026-10-07T18:55:42.248309+00:00 soc-defender sshd-session[1742]: pam_unix(sshd:session): session closed for user a5rasx
+2026-10-07T18:55:42.248556+00:00 soc-defender systemd-logind[2289]: Session 1 logged out. Waiting for processes to exit.
+2026-10-07T18:55:42.248911+00:00 soc-defender sshd-session[1114]: pam_unix(sshd:session): session closed for user a5rasx
+2026-10-07T18:55:42.249186+00:00 soc-defender sshd-session[1742]: syslogin_perform_logout: logout() returned an error
+2026-10-07T18:55:42.249277+00:00 soc-defender sshd-session[1114]: syslogin_perform_logout: logout() returned an error
+2026-10-08T07:23:56.567575+00:00 soc-defender systemd-logind[2985]: New seat seat0.
+2026-10-08T07:23:56.594982+00:00 soc-defender systemd-logind[2985]: Leader of session '1' is gone while deserializing.
+2026-10-08T07:23:56.606210+00:00 soc-defender systemd-logind[2985]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-08T07:23:56.606321+00:00 soc-defender systemd-logind[2985]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-08T07:23:56.609626+00:00 soc-defender systemd-logind[2985]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-08T07:23:56.686225+00:00 soc-defender systemd-logind[2985]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-08T07:24:28.557503+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T07:24:28.860340+00:00 soc-defender systemd-logind[2985]: Removed session 2.
+2026-10-08T07:27:24.631616+00:00 soc-defender sshd[1100]: Received signal 15; terminating.
+2026-10-08T07:27:25.134807+00:00 soc-defender sshd[8628]: Server listening on 0.0.0.0 port 22.
+2026-10-08T07:27:25.151362+00:00 soc-defender sshd[8628]: Server listening on :: port 22.
+2026-10-08T08:48:47.937344+00:00 soc-defender sshd-session[18367]: Accepted password for a5rasx from 10.0.2.2 port 53300 ssh2
+2026-10-08T08:48:47.942772+00:00 soc-defender sshd-session[18367]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-08T08:48:48.222666+00:00 soc-defender systemd-logind[2985]: New session '5' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-08T08:48:49.072792+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-08T08:48:49.077748+00:00 soc-defender systemd-logind[2985]: New session '6' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-08T08:48:57.843600+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:48:57.847041+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/pkill -9 suricata
+2026-10-08T08:48:57.884856+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:49:16.977814+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:49:16.980365+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/nft delete table inet suricata_ips
+2026-10-08T08:49:17.041297+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:49:22.182648+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:49:22.182935+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/nft list ruleset
+2026-10-08T08:49:22.202428+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:49:28.286369+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:49:28.286714+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl start suricata
+2026-10-08T08:50:21.685844+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:50:23.694706+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:50:23.696719+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status suricata
+2026-10-08T08:50:24.037267+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:50:27.241601+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:50:27.244252+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl start suricata
+2026-10-08T08:50:51.519127+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:50:57.542832+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:50:57.543223+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status suricata
+2026-10-08T08:51:05.557131+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:51:20.815484+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:51:20.818200+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/nano /var/lib/suricata/rules/local.rules
+2026-10-08T08:51:38.445295+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T08:51:40.194678+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-08T08:51:40.194997+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/1 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl restart suricata
+2026-10-08T08:52:47.782170+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-08T20:19:42.192187+00:00 soc-defender systemd-logind[1027]: New seat seat0.
+2026-10-08T20:19:42.192190+00:00 soc-defender systemd-logind[1027]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-08T20:19:42.192207+00:00 soc-defender systemd-logind[1027]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-08T20:19:42.192210+00:00 soc-defender systemd-logind[1027]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-08T20:19:48.926641+00:00 soc-defender sshd[1263]: Server listening on 0.0.0.0 port 22.
+2026-10-08T20:19:48.931083+00:00 soc-defender sshd[1263]: Server listening on :: port 22.
+2026-10-08T20:19:53.852310+00:00 soc-defender sshd-session[1265]: Accepted password for a5rasx from 10.0.2.2 port 54020 ssh2
+2026-10-08T20:19:53.853891+00:00 soc-defender sshd-session[1265]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-08T20:19:53.900538+00:00 soc-defender systemd-logind[1027]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-08T20:19:53.978224+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-08T20:19:53.981493+00:00 soc-defender systemd-logind[1027]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-12T20:48:53.491210+00:00 soc-defender systemd-logind[1038]: New seat seat0.
+2026-10-12T20:48:53.491222+00:00 soc-defender systemd-logind[1038]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-12T20:48:53.491227+00:00 soc-defender systemd-logind[1038]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-12T20:48:53.491238+00:00 soc-defender systemd-logind[1038]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-12T20:49:11.467374+00:00 soc-defender sshd[1349]: Server listening on 0.0.0.0 port 22.
+2026-10-12T20:49:11.467669+00:00 soc-defender sshd[1349]: Server listening on :: port 22.
+2026-10-12T20:49:55.288590+00:00 soc-defender sshd-session[1351]: Accepted password for a5rasx from 10.0.2.2 port 59238 ssh2
+2026-10-12T20:49:55.289738+00:00 soc-defender sshd-session[1351]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-12T20:49:55.326406+00:00 soc-defender systemd-logind[1038]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-12T20:49:55.453131+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-12T20:49:55.455123+00:00 soc-defender systemd-logind[1038]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-12T20:56:17.197313+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T20:56:17.207753+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/dpkg -i ./wazuh-agent_4.14.8-1_amd64.deb
+2026-10-12T20:56:27.795332+00:00 soc-defender groupadd[1639]: group added to /etc/group: name=wazuh, GID=108
+2026-10-12T20:56:27.840360+00:00 soc-defender groupadd[1639]: group added to /etc/gshadow: name=wazuh
+2026-10-12T20:56:27.854186+00:00 soc-defender groupadd[1639]: new group: name=wazuh, GID=108
+2026-10-12T20:56:28.261500+00:00 soc-defender useradd[1649]: new user: name=wazuh, UID=105, GID=108, home=/var/ossec, shell=/sbin/nologin, from=/dev/pts/1
+2026-10-12T20:56:40.244811+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T20:57:27.895059+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T20:57:27.896480+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl daemon-reload
+2026-10-12T20:57:29.150893+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T20:57:29.226300+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T20:57:29.227227+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl enable wazuh-agent
+2026-10-12T20:57:30.283443+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T20:57:30.355196+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T20:57:30.357529+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl start wazuh-agent
+2026-10-12T20:57:37.048436+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T20:57:37.269227+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T20:57:37.270847+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status wazuh-agent --no-pager
+2026-10-12T20:57:37.339945+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:02:09.622052+00:00 soc-defender systemd-logind[1039]: New seat seat0.
+2026-10-12T22:02:09.578965+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-12T22:02:09.579683+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-12T22:02:09.579726+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-12T22:05:12.242821+00:00 soc-defender sshd[1395]: Server listening on 0.0.0.0 port 22.
+2026-10-12T22:05:12.254823+00:00 soc-defender sshd[1395]: Server listening on :: port 22.
+2026-10-12T22:05:19.666721+00:00 soc-defender sshd-session[1397]: Accepted password for a5rasx from 10.0.2.2 port 61739 ssh2
+2026-10-12T22:05:19.672526+00:00 soc-defender sshd-session[1397]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-12T22:05:19.851598+00:00 soc-defender systemd-logind[1039]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-12T22:05:20.055898+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-12T22:05:20.065713+00:00 soc-defender systemd-logind[1039]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-12T22:06:30.310205+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:06:30.312832+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status suricata --no-pager
+2026-10-12T22:06:30.461653+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:06:30.497129+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:06:30.497482+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/ls -lh /var/log/suricata/eve.json
+2026-10-12T22:06:30.544193+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:07:06.791839+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:07:06.798324+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/tee -a /var/ossec/etc/ossec.conf
+2026-10-12T22:07:06.813004+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:07:06.874590+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:07:06.878607+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/tail -n 7 /var/ossec/etc/ossec.conf
+2026-10-12T22:07:06.894352+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:07:06.951610+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:07:06.958827+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl restart wazuh-agent
+2026-10-12T22:07:18.536586+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:07:18.608118+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:07:18.609340+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status wazuh-agent --no-pager
+2026-10-12T22:07:18.638688+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:08:05.519228+00:00 soc-defender sshd-session[1784]: banner exchange: Connection from 10.10.10.40 port 56912: invalid format
+2026-10-12T22:08:24.470923+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:08:24.473483+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/tail -n 3 /var/log/suricata/fast.log
+2026-10-12T22:08:24.487943+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:17:01.300361+00:00 soc-defender CRON[1821]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-12T22:17:01.341047+00:00 soc-defender CRON[1821]: pam_unix(cron:session): session closed for user root
+2026-10-12T22:30:31.338000+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:30:31.625736+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status suricata --no-pager
+2026-10-12T22:30:37.130024+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:30:37.599885+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:30:37.602331+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status wazuh-agent --no-pager
+2026-10-12T22:30:37.708833+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:30:37.808922+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:30:37.814472+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/ls -lh /var/log/suricata/eve.json
+2026-10-12T22:30:37.914820+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:30:38.020279+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:30:38.022358+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/tail -n 1 /var/log/suricata/eve.json
+2026-10-12T22:30:38.050164+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:31:19.719984+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:31:19.721024+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/cp /var/ossec/etc/ossec.conf /var/ossec/etc/ossec.conf.bak
+2026-10-12T22:31:19.753401+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:31:19.812619+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:31:19.814131+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/grep -n ossec_config> /var/ossec/etc/ossec.conf
+2026-10-12T22:31:19.846270+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:31:26.466892+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:31:26.467131+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/nano /var/ossec/etc/ossec.conf
+2026-10-12T22:34:21.236057+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:34:25.736827+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:34:25.737120+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/grep -c eve.json /var/ossec/etc/ossec.conf
+2026-10-12T22:34:25.747420+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:34:45.822712+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:34:45.824007+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/tail -8 /var/ossec/etc/ossec.conf
+2026-10-12T22:34:45.849361+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:34:56.059368+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:34:56.061605+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl restart wazuh-agent
+2026-10-12T22:35:04.502151+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:35:14.620964+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:35:14.625061+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status wazuh-agent --no-pager
+2026-10-12T22:35:14.691451+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:35:14.748978+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:35:14.749252+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/grep -i eve.json /var/ossec/logs/ossec.log
+2026-10-12T22:35:14.769647+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:35:20.509123+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:35:20.522617+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/cp /var/ossec/etc/ossec.conf.bak /var/ossec/etc/ossec.conf
+2026-10-12T22:35:20.522997+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:35:54.728638+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:35:54.803936+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl restart wazuh-agent
+2026-10-12T22:36:02.695514+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:36:15.293477+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:36:15.293673+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status wazuh-agent --no-pager
+2026-10-12T22:36:15.398745+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:36:16.520760+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:36:16.521073+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/grep -i eve.json /var/ossec/logs/ossec.log
+2026-10-12T22:36:16.624796+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:36:38.049932+00:00 soc-defender sshd-session[3491]: error: send_error: write: Broken pipe
+2026-10-12T22:36:38.060634+00:00 soc-defender sshd-session[3491]: banner exchange: Connection from 10.10.10.40 port 46354: invalid format
+2026-10-12T22:36:41.906729+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:36:41.907642+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/grep 1000001 /var/log/suricata/fast.log
+2026-10-12T22:36:41.925663+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:43:23.110816+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-12T22:43:23.150945+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/poweroff 
+2026-10-12T22:43:23.225251+00:00 soc-defender systemd-logind[1039]: The system will power off now!
+2026-10-12T22:43:23.296001+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-12T22:43:25.259189+00:00 soc-defender systemd-logind[1039]: System is powering down.
+2026-10-12T22:43:25.605712+00:00 soc-defender sshd-session[1397]: error: mm_reap: child terminated by signal 15
+2026-10-12T22:43:25.666367+00:00 soc-defender sshd-session[1397]: pam_unix(sshd:session): session closed for user a5rasx
+2026-10-13T18:10:27.036588+00:00 soc-defender systemd-logind[1041]: New seat seat0.
+2026-10-13T18:10:27.036603+00:00 soc-defender systemd-logind[1041]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-13T18:10:27.036610+00:00 soc-defender systemd-logind[1041]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-13T18:10:27.036618+00:00 soc-defender systemd-logind[1041]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-13T18:10:49.153422+00:00 soc-defender sshd[1463]: Server listening on 0.0.0.0 port 22.
+2026-10-13T18:10:49.165832+00:00 soc-defender sshd[1463]: Server listening on :: port 22.
+2026-10-13T18:10:59.784016+00:00 soc-defender sshd-session[1465]: Accepted password for a5rasx from 10.0.2.2 port 63373 ssh2
+2026-10-13T18:10:59.845136+00:00 soc-defender sshd-session[1465]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-13T18:11:00.197785+00:00 soc-defender systemd-logind[1041]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-13T18:11:00.600328+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-13T18:11:00.624633+00:00 soc-defender systemd-logind[1041]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-13T18:13:18.049262+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-13T18:13:18.169826+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/systemctl status suricata wazuh-agent --no-pager
+2026-10-13T18:13:24.217105+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-13T18:17:01.550002+00:00 soc-defender CRON[2081]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-13T18:17:01.561911+00:00 soc-defender CRON[2081]: pam_unix(cron:session): session closed for user root
+2026-10-13T18:27:02.412186+00:00 soc-defender sshd-session[2105]: error: send_error: write: Broken pipe
+2026-10-13T18:27:02.415907+00:00 soc-defender sshd-session[2105]: banner exchange: Connection from 10.10.10.40 port 46122: invalid format
+2026-10-13T18:32:14.523394+00:00 soc-defender sshd-session[2123]: Invalid user fakeuser from 10.10.10.40 port 55932
+2026-10-13T18:32:14.560290+00:00 soc-defender sshd-session[2123]: Connection closed by invalid user fakeuser 10.10.10.40 port 55932 [preauth]
+2026-10-13T18:32:14.678474+00:00 soc-defender sshd-session[2125]: Invalid user fakeuser from 10.10.10.40 port 55944
+2026-10-13T18:32:14.689292+00:00 soc-defender sshd-session[2125]: Connection closed by invalid user fakeuser 10.10.10.40 port 55944 [preauth]
+2026-10-13T18:32:14.828434+00:00 soc-defender sshd-session[2127]: Invalid user fakeuser from 10.10.10.40 port 55946
+2026-10-13T18:32:14.837789+00:00 soc-defender sshd-session[2127]: Connection closed by invalid user fakeuser 10.10.10.40 port 55946 [preauth]
+2026-10-13T18:32:15.008666+00:00 soc-defender sshd-session[2129]: Invalid user fakeuser from 10.10.10.40 port 55956
+2026-10-13T18:32:15.026510+00:00 soc-defender sshd-session[2129]: Connection closed by invalid user fakeuser 10.10.10.40 port 55956 [preauth]
+2026-10-13T18:32:15.185759+00:00 soc-defender sshd-session[2131]: Invalid user fakeuser from 10.10.10.40 port 55958
+2026-10-13T18:32:15.196609+00:00 soc-defender sshd-session[2131]: Connection closed by invalid user fakeuser 10.10.10.40 port 55958 [preauth]
+2026-10-13T18:32:15.387742+00:00 soc-defender sshd-session[2133]: Invalid user fakeuser from 10.10.10.40 port 55962
+2026-10-13T18:32:15.397598+00:00 soc-defender sshd-session[2133]: Connection closed by invalid user fakeuser 10.10.10.40 port 55962 [preauth]
+2026-10-13T19:10:12.364521+00:00 soc-defender sshd-session[2383]: Accepted password for a5rasx from 10.10.10.40 port 59914 ssh2
+2026-10-13T19:10:12.379390+00:00 soc-defender sshd-session[2383]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-13T19:10:12.418350+00:00 soc-defender systemd-logind[1041]: New session '4' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-13T19:10:14.462891+00:00 soc-defender sshd-session[2440]: Received disconnect from 10.10.10.40 port 59914:11: disconnected by user
+2026-10-13T19:10:14.480419+00:00 soc-defender sshd-session[2440]: Disconnected from user a5rasx 10.10.10.40 port 59914
+2026-10-13T19:10:14.481755+00:00 soc-defender sshd-session[2383]: pam_unix(sshd:session): session closed for user a5rasx
+2026-10-13T19:10:14.483202+00:00 soc-defender systemd-logind[1041]: Session 4 logged out. Waiting for processes to exit.
+2026-10-13T19:10:14.483931+00:00 soc-defender systemd-logind[1041]: Removed session 4.
+2026-10-13T19:17:01.729788+00:00 soc-defender CRON[2470]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-13T19:17:01.752231+00:00 soc-defender CRON[2470]: pam_unix(cron:session): session closed for user root
+2026-10-13T19:36:17.267712+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-13T19:36:17.457158+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/sbin/poweroff 
+2026-10-13T19:36:18.189299+00:00 soc-defender systemd-logind[1041]: The system will power off now!
+2026-10-13T19:36:18.594252+00:00 soc-defender sudo: pam_unix(sudo:session): session closed for user root
+2026-10-13T19:36:19.927696+00:00 soc-defender systemd-logind[1041]: System is powering down.
+2026-10-13T19:36:20.171341+00:00 soc-defender sshd-session[1465]: error: mm_reap: child terminated by signal 15
+2026-10-13T19:36:20.189588+00:00 soc-defender sshd-session[1465]: pam_unix(sshd:session): session closed for user a5rasx
+2026-10-13T19:36:20.767598+00:00 soc-defender sshd[1463]: Received signal 15; terminating.
+2026-10-13T20:08:27.854482+00:00 soc-defender systemd-logind[1033]: New seat seat0.
+2026-10-13T20:08:27.854633+00:00 soc-defender systemd-logind[1033]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-13T20:08:27.854740+00:00 soc-defender systemd-logind[1033]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-13T20:08:27.854754+00:00 soc-defender systemd-logind[1033]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-13T20:10:19.176707+00:00 soc-defender sshd[1393]: Server listening on 0.0.0.0 port 22.
+2026-10-13T20:10:19.228795+00:00 soc-defender sshd[1393]: Server listening on :: port 22.
+2026-10-13T20:10:54.799054+00:00 soc-defender sshd-session[1396]: Accepted password for a5rasx from 10.0.2.2 port 56709 ssh2
+2026-10-13T20:10:54.837377+00:00 soc-defender sshd-session[1396]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-13T20:10:55.175520+00:00 soc-defender systemd-logind[1033]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-13T20:10:55.491961+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-13T20:10:55.508105+00:00 soc-defender systemd-logind[1033]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-13T20:17:01.439126+00:00 soc-defender CRON[2003]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-13T20:17:01.483848+00:00 soc-defender CRON[2003]: pam_unix(cron:session): session closed for user root
+2026-10-13T20:27:16.830477+00:00 soc-defender sshd-session[2065]: Invalid user admin from 10.10.10.40 port 36014
+2026-10-13T20:27:16.869039+00:00 soc-defender sshd-session[2065]: Received disconnect from 10.10.10.40 port 36014:11: Bye Bye [preauth]
+2026-10-13T20:27:16.869520+00:00 soc-defender sshd-session[2065]: Disconnected from invalid user admin 10.10.10.40 port 36014 [preauth]
+2026-10-13T20:27:17.740894+00:00 soc-defender sshd-session[2069]: Invalid user admin from 10.10.10.40 port 36054
+2026-10-13T20:27:17.819308+00:00 soc-defender sshd-session[2067]: Invalid user admin from 10.10.10.40 port 36030
+2026-10-13T20:27:17.827715+00:00 soc-defender sshd-session[2069]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:17.828898+00:00 soc-defender sshd-session[2069]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:27:17.861310+00:00 soc-defender sshd-session[2068]: Invalid user admin from 10.10.10.40 port 36040
+2026-10-13T20:27:17.911247+00:00 soc-defender sshd-session[2067]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:17.918698+00:00 soc-defender sshd-session[2067]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:27:17.939507+00:00 soc-defender sshd-session[2070]: Invalid user admin from 10.10.10.40 port 36058
+2026-10-13T20:27:17.953408+00:00 soc-defender sshd-session[2068]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:17.957125+00:00 soc-defender sshd-session[2068]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:27:17.969113+00:00 soc-defender sshd-session[2070]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:17.970864+00:00 soc-defender sshd-session[2070]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:27:19.623474+00:00 soc-defender sshd-session[2069]: Failed password for invalid user admin from 10.10.10.40 port 36054 ssh2
+2026-10-13T20:27:19.768929+00:00 soc-defender sshd-session[2070]: Failed password for invalid user admin from 10.10.10.40 port 36058 ssh2
+2026-10-13T20:27:19.930465+00:00 soc-defender sshd-session[2069]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:19.952401+00:00 soc-defender sshd-session[2067]: Failed password for invalid user admin from 10.10.10.40 port 36030 ssh2
+2026-10-13T20:27:20.072266+00:00 soc-defender sshd-session[2067]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:20.114335+00:00 soc-defender sshd-session[2070]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:20.258303+00:00 soc-defender sshd-session[2068]: Failed password for invalid user admin from 10.10.10.40 port 36040 ssh2
+2026-10-13T20:27:21.621680+00:00 soc-defender sshd-session[2067]: Failed password for invalid user admin from 10.10.10.40 port 36030 ssh2
+2026-10-13T20:27:21.886411+00:00 soc-defender sshd-session[2070]: Failed password for invalid user admin from 10.10.10.40 port 36058 ssh2
+2026-10-13T20:27:21.997701+00:00 soc-defender sshd-session[2069]: Failed password for invalid user admin from 10.10.10.40 port 36054 ssh2
+2026-10-13T20:27:22.086666+00:00 soc-defender sshd-session[2069]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:27:22.219440+00:00 soc-defender sshd-session[2068]: Received disconnect from 10.10.10.40 port 36040:11: Bye Bye [preauth]
+2026-10-13T20:27:22.231652+00:00 soc-defender sshd-session[2068]: Disconnected from invalid user admin 10.10.10.40 port 36040 [preauth]
+2026-10-13T20:27:22.245637+00:00 soc-defender sshd-session[2067]: Received disconnect from 10.10.10.40 port 36030:11: Bye Bye [preauth]
+2026-10-13T20:27:22.247675+00:00 soc-defender sshd-session[2067]: Disconnected from invalid user admin 10.10.10.40 port 36030 [preauth]
+2026-10-13T20:27:22.274655+00:00 soc-defender sshd-session[2067]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:27:22.291299+00:00 soc-defender sshd-session[2070]: Received disconnect from 10.10.10.40 port 36058:11: Bye Bye [preauth]
+2026-10-13T20:27:22.295618+00:00 soc-defender sshd-session[2070]: Disconnected from invalid user admin 10.10.10.40 port 36058 [preauth]
+2026-10-13T20:27:22.303724+00:00 soc-defender sshd-session[2070]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:27:22.952857+00:00 soc-defender unix_chkpwd[2082]: password check failed for user (root)
+2026-10-13T20:27:22.958665+00:00 soc-defender sshd-session[2076]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:27:22.965382+00:00 soc-defender unix_chkpwd[2081]: password check failed for user (root)
+2026-10-13T20:27:22.968569+00:00 soc-defender unix_chkpwd[2083]: password check failed for user (root)
+2026-10-13T20:27:22.972753+00:00 soc-defender sshd-session[2077]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:27:22.975250+00:00 soc-defender sshd-session[2075]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:27:24.278427+00:00 soc-defender sshd-session[2069]: Failed password for invalid user admin from 10.10.10.40 port 36054 ssh2
+2026-10-13T20:27:24.551651+00:00 soc-defender sshd-session[2075]: Failed password for root from 10.10.10.40 port 52830 ssh2
+2026-10-13T20:27:24.786959+00:00 soc-defender sshd-session[2076]: Failed password for root from 10.10.10.40 port 52840 ssh2
+2026-10-13T20:27:24.837014+00:00 soc-defender unix_chkpwd[2084]: password check failed for user (root)
+2026-10-13T20:27:24.952887+00:00 soc-defender unix_chkpwd[2085]: password check failed for user (root)
+2026-10-13T20:27:25.390165+00:00 soc-defender sshd-session[2077]: Failed password for root from 10.10.10.40 port 52852 ssh2
+2026-10-13T20:27:26.431729+00:00 soc-defender sshd-session[2069]: Received disconnect from 10.10.10.40 port 36054:11: Bye Bye [preauth]
+2026-10-13T20:27:26.432149+00:00 soc-defender sshd-session[2069]: Disconnected from invalid user admin 10.10.10.40 port 36054 [preauth]
+2026-10-13T20:27:26.438592+00:00 soc-defender sshd-session[2069]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:27:26.452522+00:00 soc-defender sshd[1393]: srclimit_penalise: 10.10.10.40/32: activating ipv4 penalty of 16 seconds for penalty: failed authentication
+2026-10-13T20:27:26.463157+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52864 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:26.639988+00:00 soc-defender sshd-session[2076]: Failed password for root from 10.10.10.40 port 52840 ssh2
+2026-10-13T20:27:26.758410+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52872 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:26.883359+00:00 soc-defender unix_chkpwd[2086]: password check failed for user (root)
+2026-10-13T20:27:26.902124+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52888 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:26.982661+00:00 soc-defender unix_chkpwd[2087]: password check failed for user (root)
+2026-10-13T20:27:27.014039+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52894 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:27.083155+00:00 soc-defender sshd-session[2075]: Failed password for root from 10.10.10.40 port 52830 ssh2
+2026-10-13T20:27:27.276877+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52898 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:27.536252+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52910 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:27.946827+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52912 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:28.219165+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52926 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:28.514924+00:00 soc-defender sshd-session[2077]: Failed password for root from 10.10.10.40 port 52852 ssh2
+2026-10-13T20:27:28.854786+00:00 soc-defender sshd-session[2075]: Received disconnect from 10.10.10.40 port 52830:11: Bye Bye [preauth]
+2026-10-13T20:27:28.858448+00:00 soc-defender sshd-session[2075]: Disconnected from authenticating user root 10.10.10.40 port 52830 [preauth]
+2026-10-13T20:27:28.863926+00:00 soc-defender sshd[1393]: drop connection #3 from [10.10.10.40]:52934 on [10.10.10.20]:22 penalty: failed authentication
+2026-10-13T20:27:28.870965+00:00 soc-defender sshd-session[2075]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:27:29.078271+00:00 soc-defender sshd-session[2077]: Received disconnect from 10.10.10.40 port 52852:11: Bye Bye [preauth]
+2026-10-13T20:27:29.082402+00:00 soc-defender sshd-session[2077]: Disconnected from authenticating user root 10.10.10.40 port 52852 [preauth]
+2026-10-13T20:27:29.085527+00:00 soc-defender sshd-session[2077]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:27:29.382495+00:00 soc-defender sshd-session[2076]: Failed password for root from 10.10.10.40 port 52840 ssh2
+2026-10-13T20:27:31.019715+00:00 soc-defender sshd-session[2076]: Received disconnect from 10.10.10.40 port 52840:11: Bye Bye [preauth]
+2026-10-13T20:27:31.022788+00:00 soc-defender sshd-session[2076]: Disconnected from authenticating user root 10.10.10.40 port 52840 [preauth]
+2026-10-13T20:27:31.045107+00:00 soc-defender sshd-session[2076]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:31:47.276299+00:00 soc-defender sshd-session[2121]: Invalid user admin from 10.10.10.40 port 47122
+2026-10-13T20:31:47.303557+00:00 soc-defender sshd-session[2121]: Received disconnect from 10.10.10.40 port 47122:11: Bye Bye [preauth]
+2026-10-13T20:31:47.304503+00:00 soc-defender sshd-session[2121]: Disconnected from invalid user admin 10.10.10.40 port 47122 [preauth]
+2026-10-13T20:31:47.709402+00:00 soc-defender sshd-session[2123]: Invalid user admin from 10.10.10.40 port 47136
+2026-10-13T20:31:47.730272+00:00 soc-defender sshd-session[2123]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:31:47.732283+00:00 soc-defender sshd-session[2123]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:31:49.540502+00:00 soc-defender sshd-session[2123]: Failed password for invalid user admin from 10.10.10.40 port 47136 ssh2
+2026-10-13T20:31:49.899373+00:00 soc-defender sshd-session[2123]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:31:51.080351+00:00 soc-defender sshd-session[2123]: Failed password for invalid user admin from 10.10.10.40 port 47136 ssh2
+2026-10-13T20:31:52.056498+00:00 soc-defender sshd-session[2123]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:31:53.877477+00:00 soc-defender sshd-session[2123]: Failed password for invalid user admin from 10.10.10.40 port 47136 ssh2
+2026-10-13T20:31:54.228584+00:00 soc-defender sshd-session[2123]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:31:56.451027+00:00 soc-defender sshd-session[2123]: Failed password for invalid user admin from 10.10.10.40 port 47136 ssh2
+2026-10-13T20:31:58.540626+00:00 soc-defender sshd-session[2123]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:32:00.489428+00:00 soc-defender sshd-session[2123]: Failed password for invalid user admin from 10.10.10.40 port 47136 ssh2
+2026-10-13T20:32:00.701971+00:00 soc-defender sshd-session[2123]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:32:03.040268+00:00 soc-defender sshd-session[2123]: Failed password for invalid user admin from 10.10.10.40 port 47136 ssh2
+2026-10-13T20:32:06.885236+00:00 soc-defender sshd-session[2123]: error: maximum authentication attempts exceeded for invalid user admin from 10.10.10.40 port 47136 ssh2 [preauth]
+2026-10-13T20:32:06.903757+00:00 soc-defender sshd-session[2123]: Disconnecting invalid user admin 10.10.10.40 port 47136: Too many authentication failures [preauth]
+2026-10-13T20:32:06.904390+00:00 soc-defender sshd-session[2123]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:32:06.904672+00:00 soc-defender sshd-session[2123]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-13T20:32:07.130327+00:00 soc-defender sshd-session[2125]: Invalid user admin from 10.10.10.40 port 57108
+2026-10-13T20:32:07.147130+00:00 soc-defender sshd-session[2125]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:32:07.148305+00:00 soc-defender sshd-session[2125]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:33:07.511627+00:00 soc-defender sshd-session[2125]: Failed password for invalid user admin from 10.10.10.40 port 57108 ssh2
+2026-10-13T20:33:07.583810+00:00 soc-defender sshd-session[2125]: Received disconnect from 10.10.10.40 port 57108:11: Bye Bye [preauth]
+2026-10-13T20:33:07.616248+00:00 soc-defender sshd-session[2125]: Disconnected from invalid user admin 10.10.10.40 port 57108 [preauth]
+2026-10-13T20:33:07.845364+00:00 soc-defender unix_chkpwd[2139]: password check failed for user (root)
+2026-10-13T20:33:07.849405+00:00 soc-defender sshd-session[2136]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:33:09.900420+00:00 soc-defender sshd-session[2136]: Failed password for root from 10.10.10.40 port 51002 ssh2
+2026-10-13T20:33:11.869137+00:00 soc-defender unix_chkpwd[2143]: password check failed for user (root)
+2026-10-13T20:33:13.607675+00:00 soc-defender sshd-session[2136]: Failed password for root from 10.10.10.40 port 51002 ssh2
+2026-10-13T20:33:13.876588+00:00 soc-defender unix_chkpwd[2144]: password check failed for user (root)
+2026-10-13T20:33:15.731896+00:00 soc-defender sshd-session[2136]: Failed password for root from 10.10.10.40 port 51002 ssh2
+2026-10-13T20:33:15.896827+00:00 soc-defender unix_chkpwd[2145]: password check failed for user (root)
+2026-10-13T20:33:18.027832+00:00 soc-defender sshd-session[2136]: Failed password for root from 10.10.10.40 port 51002 ssh2
+2026-10-13T20:33:19.915564+00:00 soc-defender unix_chkpwd[2146]: password check failed for user (root)
+2026-10-13T20:33:22.136450+00:00 soc-defender sshd-session[2136]: Failed password for root from 10.10.10.40 port 51002 ssh2
+2026-10-13T20:33:23.942321+00:00 soc-defender unix_chkpwd[2147]: password check failed for user (root)
+2026-10-13T20:33:25.514116+00:00 soc-defender sshd-session[2136]: Failed password for root from 10.10.10.40 port 51002 ssh2
+2026-10-13T20:33:25.924535+00:00 soc-defender sshd-session[2136]: error: maximum authentication attempts exceeded for root from 10.10.10.40 port 51002 ssh2 [preauth]
+2026-10-13T20:33:25.927043+00:00 soc-defender sshd-session[2136]: Disconnecting authenticating user root 10.10.10.40 port 51002: Too many authentication failures [preauth]
+2026-10-13T20:33:25.927286+00:00 soc-defender sshd-session[2136]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:33:25.927848+00:00 soc-defender sshd-session[2136]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-13T20:33:26.132719+00:00 soc-defender unix_chkpwd[2150]: password check failed for user (root)
+2026-10-13T20:33:26.136993+00:00 soc-defender sshd-session[2148]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:33:28.058083+00:00 soc-defender sshd-session[2148]: Failed password for root from 10.10.10.40 port 54014 ssh2
+2026-10-13T20:33:28.139572+00:00 soc-defender unix_chkpwd[2151]: password check failed for user (root)
+2026-10-13T20:33:29.796117+00:00 soc-defender sshd-session[2148]: Failed password for root from 10.10.10.40 port 54014 ssh2
+2026-10-13T20:33:30.161783+00:00 soc-defender unix_chkpwd[2152]: password check failed for user (root)
+2026-10-13T20:33:31.710995+00:00 soc-defender sshd-session[2148]: Failed password for root from 10.10.10.40 port 54014 ssh2
+2026-10-13T20:33:32.161542+00:00 soc-defender sshd-session[2148]: Received disconnect from 10.10.10.40 port 54014:11: Bye Bye [preauth]
+2026-10-13T20:33:32.162573+00:00 soc-defender sshd-session[2148]: Disconnected from authenticating user root 10.10.10.40 port 54014 [preauth]
+2026-10-13T20:33:32.177405+00:00 soc-defender sshd-session[2148]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=root
+2026-10-13T20:33:32.353212+00:00 soc-defender sshd-session[2153]: Invalid user test from 10.10.10.40 port 35348
+2026-10-13T20:33:32.369092+00:00 soc-defender sshd-session[2153]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:32.370120+00:00 soc-defender sshd-session[2153]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:33:34.530744+00:00 soc-defender sshd-session[2153]: Failed password for invalid user test from 10.10.10.40 port 35348 ssh2
+2026-10-13T20:33:35.146356+00:00 soc-defender sshd-session[2153]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:37.549230+00:00 soc-defender sshd-session[2153]: Failed password for invalid user test from 10.10.10.40 port 35348 ssh2
+2026-10-13T20:33:37.944692+00:00 soc-defender sshd-session[2153]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:40.583468+00:00 soc-defender sshd-session[2153]: Failed password for invalid user test from 10.10.10.40 port 35348 ssh2
+2026-10-13T20:33:40.717677+00:00 soc-defender sshd-session[2153]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:42.625985+00:00 soc-defender sshd-session[2153]: Failed password for invalid user test from 10.10.10.40 port 35348 ssh2
+2026-10-13T20:33:43.496372+00:00 soc-defender sshd-session[2153]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:45.585893+00:00 soc-defender sshd-session[2153]: Failed password for invalid user test from 10.10.10.40 port 35348 ssh2
+2026-10-13T20:33:46.272877+00:00 soc-defender sshd-session[2153]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:48.520546+00:00 soc-defender sshd-session[2153]: Failed password for invalid user test from 10.10.10.40 port 35348 ssh2
+2026-10-13T20:33:49.045923+00:00 soc-defender sshd-session[2153]: error: maximum authentication attempts exceeded for invalid user test from 10.10.10.40 port 35348 ssh2 [preauth]
+2026-10-13T20:33:49.046816+00:00 soc-defender sshd-session[2153]: Disconnecting invalid user test 10.10.10.40 port 35348: Too many authentication failures [preauth]
+2026-10-13T20:33:49.053431+00:00 soc-defender sshd-session[2153]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:33:49.053627+00:00 soc-defender sshd-session[2153]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-13T20:33:49.193685+00:00 soc-defender sshd-session[2156]: Invalid user test from 10.10.10.40 port 55056
+2026-10-13T20:33:49.205411+00:00 soc-defender sshd-session[2156]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:49.205922+00:00 soc-defender sshd-session[2156]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:33:51.287016+00:00 soc-defender sshd-session[2156]: Failed password for invalid user test from 10.10.10.40 port 55056 ssh2
+2026-10-13T20:33:52.002983+00:00 soc-defender sshd-session[2156]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:53.853769+00:00 soc-defender sshd-session[2156]: Failed password for invalid user test from 10.10.10.40 port 55056 ssh2
+2026-10-13T20:33:54.790281+00:00 soc-defender sshd-session[2156]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:57.208168+00:00 soc-defender sshd-session[2156]: Failed password for invalid user test from 10.10.10.40 port 55056 ssh2
+2026-10-13T20:33:57.559723+00:00 soc-defender sshd-session[2156]: Received disconnect from 10.10.10.40 port 55056:11: Bye Bye [preauth]
+2026-10-13T20:33:57.570700+00:00 soc-defender sshd-session[2156]: Disconnected from invalid user test 10.10.10.40 port 55056 [preauth]
+2026-10-13T20:33:57.574495+00:00 soc-defender sshd-session[2156]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:33:57.716793+00:00 soc-defender sshd-session[2190]: Invalid user fakeuser from 10.10.10.40 port 55112
+2026-10-13T20:33:57.728425+00:00 soc-defender sshd-session[2190]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:33:57.730127+00:00 soc-defender sshd-session[2190]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:00.035452+00:00 soc-defender sshd-session[2190]: Failed password for invalid user fakeuser from 10.10.10.40 port 55112 ssh2
+2026-10-13T20:34:00.681572+00:00 soc-defender sshd-session[2190]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:02.697845+00:00 soc-defender sshd-session[2190]: Failed password for invalid user fakeuser from 10.10.10.40 port 55112 ssh2
+2026-10-13T20:34:03.633785+00:00 soc-defender sshd-session[2190]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:06.162731+00:00 soc-defender sshd-session[2190]: Failed password for invalid user fakeuser from 10.10.10.40 port 55112 ssh2
+2026-10-13T20:34:06.584090+00:00 soc-defender sshd-session[2190]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:08.966236+00:00 soc-defender sshd-session[2190]: Failed password for invalid user fakeuser from 10.10.10.40 port 55112 ssh2
+2026-10-13T20:34:09.542108+00:00 soc-defender sshd-session[2190]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:11.586423+00:00 soc-defender sshd-session[2190]: Failed password for invalid user fakeuser from 10.10.10.40 port 55112 ssh2
+2026-10-13T20:34:12.495995+00:00 soc-defender sshd-session[2190]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:14.157524+00:00 soc-defender sshd-session[2190]: Failed password for invalid user fakeuser from 10.10.10.40 port 55112 ssh2
+2026-10-13T20:34:15.445049+00:00 soc-defender sshd-session[2190]: error: maximum authentication attempts exceeded for invalid user fakeuser from 10.10.10.40 port 55112 ssh2 [preauth]
+2026-10-13T20:34:15.446010+00:00 soc-defender sshd-session[2190]: Disconnecting invalid user fakeuser 10.10.10.40 port 55112: Too many authentication failures [preauth]
+2026-10-13T20:34:15.450060+00:00 soc-defender sshd-session[2190]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:15.462158+00:00 soc-defender sshd-session[2190]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-13T20:34:15.591694+00:00 soc-defender sshd-session[2192]: Invalid user fakeuser from 10.10.10.40 port 36398
+2026-10-13T20:34:15.602075+00:00 soc-defender sshd-session[2192]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:15.602394+00:00 soc-defender sshd-session[2192]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:17.616540+00:00 soc-defender sshd-session[2192]: Failed password for invalid user fakeuser from 10.10.10.40 port 36398 ssh2
+2026-10-13T20:34:18.556527+00:00 soc-defender sshd-session[2192]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:21.239304+00:00 soc-defender sshd-session[2192]: Failed password for invalid user fakeuser from 10.10.10.40 port 36398 ssh2
+2026-10-13T20:34:21.508806+00:00 soc-defender sshd-session[2192]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:23.152732+00:00 soc-defender sshd-session[2192]: Failed password for invalid user fakeuser from 10.10.10.40 port 36398 ssh2
+2026-10-13T20:34:24.466954+00:00 soc-defender sshd-session[2192]: Received disconnect from 10.10.10.40 port 36398:11: Bye Bye [preauth]
+2026-10-13T20:34:24.473237+00:00 soc-defender sshd-session[2192]: Disconnected from invalid user fakeuser 10.10.10.40 port 36398 [preauth]
+2026-10-13T20:34:24.473949+00:00 soc-defender sshd-session[2192]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:24.663214+00:00 soc-defender sshd-session[2194]: Invalid user guest from 10.10.10.40 port 56362
+2026-10-13T20:34:24.688743+00:00 soc-defender sshd-session[2194]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:24.689396+00:00 soc-defender sshd-session[2194]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:26.025486+00:00 soc-defender sshd-session[2194]: Failed password for invalid user guest from 10.10.10.40 port 56362 ssh2
+2026-10-13T20:34:26.330988+00:00 soc-defender sshd-session[2194]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:27.774649+00:00 soc-defender sshd-session[2194]: Failed password for invalid user guest from 10.10.10.40 port 56362 ssh2
+2026-10-13T20:34:27.971345+00:00 soc-defender sshd-session[2194]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:29.396347+00:00 soc-defender sshd-session[2194]: Failed password for invalid user guest from 10.10.10.40 port 56362 ssh2
+2026-10-13T20:34:29.617386+00:00 soc-defender sshd-session[2194]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:31.841220+00:00 soc-defender sshd-session[2194]: Failed password for invalid user guest from 10.10.10.40 port 56362 ssh2
+2026-10-13T20:34:32.898802+00:00 soc-defender sshd-session[2194]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:34.780395+00:00 soc-defender sshd-session[2194]: Failed password for invalid user guest from 10.10.10.40 port 56362 ssh2
+2026-10-13T20:34:36.175253+00:00 soc-defender sshd-session[2194]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:38.492935+00:00 soc-defender sshd-session[2194]: Failed password for invalid user guest from 10.10.10.40 port 56362 ssh2
+2026-10-13T20:34:39.447634+00:00 soc-defender sshd-session[2194]: error: maximum authentication attempts exceeded for invalid user guest from 10.10.10.40 port 56362 ssh2 [preauth]
+2026-10-13T20:34:39.449763+00:00 soc-defender sshd-session[2194]: Disconnecting invalid user guest 10.10.10.40 port 56362: Too many authentication failures [preauth]
+2026-10-13T20:34:39.452891+00:00 soc-defender sshd-session[2194]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:39.457537+00:00 soc-defender sshd-session[2194]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-13T20:34:39.587975+00:00 soc-defender sshd-session[2196]: Invalid user guest from 10.10.10.40 port 51458
+2026-10-13T20:34:39.610380+00:00 soc-defender sshd-session[2196]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:39.611394+00:00 soc-defender sshd-session[2196]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:41.517848+00:00 soc-defender sshd-session[2196]: Failed password for invalid user guest from 10.10.10.40 port 51458 ssh2
+2026-10-13T20:34:42.881802+00:00 soc-defender sshd-session[2196]: Connection closed by invalid user guest 10.10.10.40 port 51458 [preauth]
+2026-10-13T20:34:54.237439+00:00 soc-defender sshd-session[2208]: Invalid user admin from 10.10.10.40 port 47590
+2026-10-13T20:34:54.246465+00:00 soc-defender sshd-session[2208]: Received disconnect from 10.10.10.40 port 47590:11: Bye Bye [preauth]
+2026-10-13T20:34:54.252276+00:00 soc-defender sshd-session[2208]: Disconnected from invalid user admin 10.10.10.40 port 47590 [preauth]
+2026-10-13T20:34:54.669249+00:00 soc-defender sshd-session[2210]: Invalid user admin from 10.10.10.40 port 47606
+2026-10-13T20:34:54.683350+00:00 soc-defender sshd-session[2210]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:34:54.684058+00:00 soc-defender sshd-session[2210]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:34:56.144999+00:00 soc-defender sshd-session[2210]: Failed password for invalid user admin from 10.10.10.40 port 47606 ssh2
+2026-10-13T20:35:14.526775+00:00 soc-defender sshd-session[2210]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:35:16.794563+00:00 soc-defender sshd-session[2210]: Failed password for invalid user admin from 10.10.10.40 port 47606 ssh2
+2026-10-13T20:35:35.636255+00:00 soc-defender sshd-session[2210]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:36:07.581308+00:00 soc-defender sshd-session[2210]: Failed password for invalid user admin from 10.10.10.40 port 47606 ssh2
+2026-10-13T20:36:07.633262+00:00 soc-defender sshd-session[2210]: Connection closed by invalid user admin 10.10.10.40 port 47606 [preauth]
+2026-10-13T20:36:07.659385+00:00 soc-defender sshd-session[2210]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:36:07.899293+00:00 soc-defender sshd-session[2220]: Invalid user admin from 10.10.10.40 port 36634
+2026-10-13T20:36:07.915455+00:00 soc-defender sshd-session[2220]: Received disconnect from 10.10.10.40 port 36634:11: Bye Bye [preauth]
+2026-10-13T20:36:07.919570+00:00 soc-defender sshd-session[2220]: Disconnected from invalid user admin 10.10.10.40 port 36634 [preauth]
+2026-10-13T20:36:08.347307+00:00 soc-defender sshd-session[2233]: Invalid user admin from 10.10.10.40 port 36644
+2026-10-13T20:36:08.357782+00:00 soc-defender sshd-session[2233]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:36:08.357909+00:00 soc-defender sshd-session[2233]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:36:10.075844+00:00 soc-defender sshd-session[2233]: Failed password for invalid user admin from 10.10.10.40 port 36644 ssh2
+2026-10-13T20:36:28.539058+00:00 soc-defender sshd-session[2233]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:36:30.164117+00:00 soc-defender sshd-session[2233]: Failed password for invalid user admin from 10.10.10.40 port 36644 ssh2
+2026-10-13T20:36:30.691720+00:00 soc-defender sshd-session[2233]: Connection closed by invalid user admin 10.10.10.40 port 36644 [preauth]
+2026-10-13T20:36:30.695737+00:00 soc-defender sshd-session[2233]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:36:52.640202+00:00 soc-defender sshd-session[2241]: Invalid user admin from 10.10.10.40 port 47862
+2026-10-13T20:36:52.666481+00:00 soc-defender sshd-session[2241]: Received disconnect from 10.10.10.40 port 47862:11: Bye Bye [preauth]
+2026-10-13T20:36:52.678044+00:00 soc-defender sshd-session[2241]: Disconnected from invalid user admin 10.10.10.40 port 47862 [preauth]
+2026-10-13T20:36:53.196970+00:00 soc-defender sshd-session[2243]: Invalid user admin from 10.10.10.40 port 47874
+2026-10-13T20:36:53.210918+00:00 soc-defender sshd-session[2243]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:36:53.211380+00:00 soc-defender sshd-session[2243]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40 
+2026-10-13T20:36:55.632145+00:00 soc-defender sshd-session[2243]: Failed password for invalid user admin from 10.10.10.40 port 47874 ssh2
+2026-10-13T20:37:13.561105+00:00 soc-defender sshd-session[2243]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:37:15.891024+00:00 soc-defender sshd-session[2243]: Failed password for invalid user admin from 10.10.10.40 port 47874 ssh2
+2026-10-13T20:37:34.540910+00:00 soc-defender sshd-session[2243]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:37:36.574136+00:00 soc-defender sshd-session[2243]: Failed password for invalid user admin from 10.10.10.40 port 47874 ssh2
+2026-10-13T20:37:55.585542+00:00 soc-defender sshd-session[2243]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:37:57.497594+00:00 soc-defender sshd-session[2243]: Failed password for invalid user admin from 10.10.10.40 port 47874 ssh2
+2026-10-13T20:38:16.543878+00:00 soc-defender sshd-session[2243]: pam_unix(sshd:auth): check pass; user unknown
+2026-10-13T20:44:42.985245+00:00 soc-defender sshd[1393]: Timeout before authentication for connection from 10.10.10.40 to 10.10.10.20, pid = 2243
+2026-10-13T20:44:42.986534+00:00 soc-defender unix_chkpwd[2277]: password check failed for user (a5rasx)
+2026-10-13T20:44:42.987797+00:00 soc-defender sshd-session[2260]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=a5rasx
+2026-10-13T20:44:43.000452+00:00 soc-defender sshd-session[2260]: Failed password for a5rasx from 10.10.10.40 port 58830 ssh2
+2026-10-13T20:44:43.926093+00:00 soc-defender sshd-session[2260]: Connection closed by authenticating user a5rasx 10.10.10.40 port 58830 [preauth]
+2026-10-13T20:48:54.585069+00:00 soc-defender unix_chkpwd[2375]: password check failed for user (a5rasx)
+2026-10-13T20:48:54.588687+00:00 soc-defender sshd-session[2372]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=a5rasx
+2026-10-13T20:48:56.602614+00:00 soc-defender sshd-session[2372]: Failed password for a5rasx from 10.10.10.40 port 47968 ssh2
+2026-10-13T20:48:57.457232+00:00 soc-defender sshd-session[2372]: Connection closed by authenticating user a5rasx 10.10.10.40 port 47968 [preauth]
+2026-10-13T20:49:45.737554+00:00 soc-defender sshd-session[2379]: Received disconnect from 10.10.10.40 port 57460:11: Bye Bye [preauth]
+2026-10-13T20:49:45.742843+00:00 soc-defender sshd-session[2379]: Disconnected from authenticating user a5rasx 10.10.10.40 port 57460 [preauth]
+2026-10-13T20:49:47.404777+00:00 soc-defender unix_chkpwd[2383]: password check failed for user (a5rasx)
+2026-10-13T20:49:47.409391+00:00 soc-defender sshd-session[2381]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=a5rasx
+2026-10-13T20:49:49.475950+00:00 soc-defender sshd-session[2381]: Failed password for a5rasx from 10.10.10.40 port 57464 ssh2
+2026-10-13T20:49:50.334290+00:00 soc-defender sshd-session[2381]: Connection closed by authenticating user a5rasx 10.10.10.40 port 57464 [preauth]
+2026-10-13T20:50:41.382089+00:00 soc-defender sshd-session[2404]: Received disconnect from 10.10.10.40 port 38264:11: Bye Bye [preauth]
+2026-10-13T20:50:41.387054+00:00 soc-defender sshd-session[2404]: Disconnected from authenticating user a5rasx 10.10.10.40 port 38264 [preauth]
+2026-10-13T20:50:41.809240+00:00 soc-defender unix_chkpwd[2408]: password check failed for user (a5rasx)
+2026-10-13T20:50:41.811800+00:00 soc-defender sshd-session[2406]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=a5rasx
+2026-10-13T20:50:44.079323+00:00 soc-defender sshd-session[2406]: Failed password for a5rasx from 10.10.10.40 port 38276 ssh2
+2026-10-13T20:50:44.739087+00:00 soc-defender sshd-session[2406]: Connection closed by authenticating user a5rasx 10.10.10.40 port 38276 [preauth]
+2026-10-13T20:52:10.112912+00:00 soc-defender sshd-session[2416]: banner exchange: Connection from 10.10.10.40 port 48420: invalid format
+2026-10-13T20:52:16.924777+00:00 soc-defender sshd-session[2424]: Received disconnect from 10.10.10.40 port 37162:11: Bye Bye [preauth]
+2026-10-13T20:52:16.925105+00:00 soc-defender sshd-session[2424]: Disconnected from authenticating user a5rasx 10.10.10.40 port 37162 [preauth]
+2026-10-13T20:52:17.423852+00:00 soc-defender unix_chkpwd[2428]: password check failed for user (a5rasx)
+2026-10-13T20:52:17.424935+00:00 soc-defender sshd-session[2426]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=a5rasx
+2026-10-13T20:52:20.150490+00:00 soc-defender sshd-session[2426]: Failed password for a5rasx from 10.10.10.40 port 37164 ssh2
+2026-10-13T20:52:20.304520+00:00 soc-defender sshd-session[2426]: Connection closed by authenticating user a5rasx 10.10.10.40 port 37164 [preauth]
+2026-10-13T20:52:20.908584+00:00 soc-defender sshd-session[2429]: Received disconnect from 10.10.10.40 port 59818:11: Bye Bye [preauth]
+2026-10-13T20:52:20.914257+00:00 soc-defender sshd-session[2429]: Disconnected from authenticating user a5rasx 10.10.10.40 port 59818 [preauth]
+2026-10-13T20:52:21.380470+00:00 soc-defender unix_chkpwd[2433]: password check failed for user (a5rasx)
+2026-10-13T20:52:21.382579+00:00 soc-defender sshd-session[2431]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=a5rasx
+2026-10-13T20:52:23.369092+00:00 soc-defender sshd-session[2431]: Failed password for a5rasx from 10.10.10.40 port 59826 ssh2
+2026-10-13T20:52:24.269825+00:00 soc-defender sshd-session[2431]: Connection closed by authenticating user a5rasx 10.10.10.40 port 59826 [preauth]
+2026-10-13T20:52:24.800168+00:00 soc-defender sshd-session[2434]: Received disconnect from 10.10.10.40 port 59836:11: Bye Bye [preauth]
+2026-10-13T20:52:24.800450+00:00 soc-defender sshd-session[2434]: Disconnected from authenticating user a5rasx 10.10.10.40 port 59836 [preauth]
+2026-10-13T20:52:25.276240+00:00 soc-defender unix_chkpwd[2438]: password check failed for user (a5rasx)
+2026-10-13T20:52:25.281901+00:00 soc-defender sshd-session[2436]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.10.40  user=a5rasx
+2026-10-13T20:52:26.916148+00:00 soc-defender sshd-session[2436]: Failed password for a5rasx from 10.10.10.40 port 59850 ssh2
+2026-10-13T20:52:28.211745+00:00 soc-defender sshd-session[2436]: Connection closed by authenticating user a5rasx 10.10.10.40 port 59850 [preauth]
+2026-10-13T20:52:38.550459+00:00 soc-defender sshd-session[2439]: Accepted password for a5rasx from 10.10.10.40 port 32882 ssh2
+2026-10-13T20:52:38.560189+00:00 soc-defender sshd-session[2439]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-13T20:52:38.655274+00:00 soc-defender systemd-logind[1033]: New session '4' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-13T20:52:44.732408+00:00 soc-defender sshd-session[2497]: Received disconnect from 10.10.10.40 port 32882:11: disconnected by user
+2026-10-13T20:52:44.892069+00:00 soc-defender sshd-session[2497]: Disconnected from user a5rasx 10.10.10.40 port 32882
+2026-10-13T20:52:44.900200+00:00 soc-defender systemd-logind[1033]: Session 4 logged out. Waiting for processes to exit.
+2026-10-13T20:52:44.901253+00:00 soc-defender sshd-session[2439]: pam_unix(sshd:session): session closed for user a5rasx
+2026-10-13T20:52:50.144986+00:00 soc-defender systemd-logind[1033]: Removed session 4.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               2026-10-17T16:06:01.900066+00:00 soc-defender systemd-logind[1039]: New seat seat0.
+2026-10-17T16:06:01.900162+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-10-17T16:06:01.900168+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-10-17T16:06:01.900172+00:00 soc-defender systemd-logind[1039]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-10-17T16:07:18.956845+00:00 soc-defender sshd[1408]: Server listening on 0.0.0.0 port 22.
+2026-10-17T16:07:18.958738+00:00 soc-defender sshd[1408]: Server listening on :: port 22.
+2026-10-17T16:07:26.606933+00:00 soc-defender sshd-session[1410]: Accepted password for a5rasx from 10.0.2.2 port 58945 ssh2
+2026-10-17T16:07:26.614103+00:00 soc-defender sshd-session[1410]: pam_unix(sshd:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-17T16:07:26.675197+00:00 soc-defender systemd-logind[1039]: New session '1' of user 'a5rasx' with class 'user' and type 'tty'.
+2026-10-17T16:07:26.840618+00:00 soc-defender (systemd): pam_unix(systemd-user:session): session opened for user a5rasx(uid=1000) by a5rasx(uid=0)
+2026-10-17T16:07:26.845453+00:00 soc-defender systemd-logind[1039]: New session '2' of user 'a5rasx' with class 'manager' and type 'unspecified'.
+2026-10-17T16:07:47.188015+00:00 soc-defender sudo: pam_unix(sudo:session): session opened for user root(uid=0) by a5rasx(uid=1000)
+2026-10-17T16:07:47.188241+00:00 soc-defender sudo: a5rasx : TTY=/dev/pts/0 ; PWD=/home/a5rasx ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /home/a5rasx/auth.log
